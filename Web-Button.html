@@ -1,0 +1,32 @@
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        #clickButton {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button id="clickButton" onclick="increaseCounter()">Click</button>
+    
+    <script>
+        let count = 0;
+        
+        function increaseCounter() {
+            count++;
+            document.getElementById("counter").innerText = count;
+        }
+    </script>
+</body>
+</html>
