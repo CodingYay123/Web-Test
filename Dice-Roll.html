@@ -1,0 +1,39 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Roller</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #result {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>Click the button to roll a number between 1 and 12</h1>
+    <button id="rollButton">Click me to roll</button>
+    <p id="result"></p>
+    
+    <script>
+        document.getElementById('rollButton').addEventListener('click', function() {
+            var randomNumber = Math.floor(Math.random() * 12) + 1;
+            document.getElementById('result').innerText = 'You rolled: ' + randomNumber;
+        });
+    </script>
+</body>
+</html>
