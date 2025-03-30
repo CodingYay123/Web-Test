@@ -1,0 +1,51 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #header {
+        background-color: lightblue;
+        padding: 10px;
+    }
+    #content {
+        padding: 20px;
+    }
+    #button {
+        background-color: lightgreen;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div id="header">
+    <h1>Welcome to the Fun Website!</h1>
+</div>
+<div id="content">
+    <h2>Click the button below to see a surprise or a challenge!</h2>
+    <button id="button">Click Me!</button>
+    <div id="surprise"></div>
+</div>
+<script>
+    const button = document.getElementById('button');
+    const surprise = document.getElementById('surprise');
+    
+    const surprises = ['🎉', '🎈', '🎁', '🎊', '🎇','Jump 10 times','Play a game','Call Your Friend'];
+    
+    button.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * surprises.length);
+        surprise.textContent = surprises[randomIndex];
+    });
+</script>
+</body>
+</html>
